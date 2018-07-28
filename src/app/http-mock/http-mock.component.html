@@ -1,0 +1,31 @@
+<br><br>
+<h3>Now getting data through more mock services</h3>
+
+<div>
+  <label>User Name: </label> <input #userName />
+  <label>User Email: </label> <input #userEmail />
+  <button (click)="createUser(userName.value, userEmail.value);
+        userName.value = ''; userEmail.value = '';">
+      Add
+  </button>
+</div>
+
+<h1>Users</h1>
+<div class="userCard" *ngFor="let user of users" (click)="selectUser(user)" [class.selected]="user === selectedUser" >
+  <div><span>Id: </span> {{user.id}}</div>
+  <div><span>Username: </span> {{user.userName}}</div>
+  <div><span>Email: </span> {{user.email}}</div>
+  <button class="delete" (click)="deleteUser(user.id); $event.stopPropagation()">x</button>
+</div>
+
+<div *ngIf="selectedUser">
+  <label>User Name:</label>
+  <input #updateName [ngModel]="selectedUser.userName" />
+  <label>User Email:</label>
+  <input #updateEmail [ngModel]="selectedUser.email" />
+
+  <button (click)="updateUser({ 'id': selectedUser.id, 'userName': updateName.value, 'email': updateEmail.value  });">
+   Save 
+  </button>
+
+</div>

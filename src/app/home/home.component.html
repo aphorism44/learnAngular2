@@ -1,3 +1,5 @@
 <p>home route works!</p>
-<a routerLink="/route2">Route 2</a>
+ <a [routerLink]="[{ outlets: { test: ['route2'] } }]">
+    Route 2
+</a> 
 <br><br>

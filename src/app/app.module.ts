@@ -18,6 +18,8 @@ import { Page4Component } from './page4/page4.component';
 import { ParaRoutingModule } from './para-routing/para-routing.module';
 import { ParaPage1Component } from './para-page1/para-page1.component';
 import { ParaPage2Component } from './para-page2/para-page2.component';
+import { AreaComponent } from './area/area.component';
+import { RandomImagesComponent } from './random-images/random-images.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ParaPage2Component } from './para-page2/para-page2.component';
     Page3Component,
     Page4Component,
     ParaPage1Component,
-    ParaPage2Component
+    ParaPage2Component,
+    AreaComponent,
+    RandomImagesComponent
   ],
   imports: [
     BrowserModule

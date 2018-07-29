@@ -1,0 +1,28 @@
+<label>Circle Radius:</label>
+<input type="text" [(ngModel)]="circleRadius"/>
+<span>Area: {{ this.calcCircle() }}</span>
+<hr>
+<label>Square Side:</label>
+<input type="text" [(ngModel)]="squareBase"/>
+<span>Area: {{ this.calcSquare() }}</span>
+<hr>
+<label>Rectangle Base:</label>
+<input type="text" [(ngModel)]="rectangleBase"/>
+<label>Rectangle Height:</label>
+<input type="text" [(ngModel)]="rectangleHeight"/>
+<span>Area: {{ this.calcRectangle() }}</span>
+<hr>
+<label>Triangle Base:</label>
+<input type="text" [(ngModel)]="triangleBase"/>
+<label>Triangle Height:</label>
+<input type="text" [(ngModel)]="triangleHeight"/>
+<span>Area: {{ this.calcTriangle() }}</span>
+<hr>
+<label>Trapezoid Base (1):</label>
+<input type="text" [(ngModel)]="trapezoidBase1"/>
+<label>Trapezoid Base (2):</label>
+<input type="text" [(ngModel)]="trapezoidBase2"/>
+<label>Trapezoid Height:</label>
+<input type="text" [(ngModel)]="trapezoidHeight"/>
+<span>Area: {{ this.calcTrapezoid() }}</span>
+<hr>
